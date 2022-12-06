@@ -1,9 +1,23 @@
-# Energy-Surplus-Retrieval
+# About Prototype database
+Simple SQL Database that contains 3 tables: stations, clients and vehicles.
 
-Code used in the article Electric vehicles charging using photovoltaic energy surplus: A framework based on blockchain
+### What have this tables?
 
-Authors: Irvylle Raimunda Mourão Cavalcante, Jamilson Pinheiro Júnior, Jônatas Augusto Manzolli, Luiz Felipe Almeida, Mauro Pungo, Hugo Gabriel Valente Morais
+The "station" table contains the latitude and longitude of each station as well as the company name that is supplying this station.
+Each station will have an unique ID.
+Bellow we can see the "station" table.
 
-Abstract: It becomes crucial for individuals and companies to reduce their carbon footprint in a society more self-conscious about climate change and other environmental issues. In this sense, large public and private institutions are investing in small photovoltaic systems to produce green energy for self-consumption. Nevertheless, an essential part of this energy is wasted due to lower consumption during non-business periods. This work proposes a novel framework that uses this energy surplus to charge external electric vehicles, creating new business opportunities. Furthermore, this work introduces a novel marketplace platform based on blockchain technology to allow energy trading between institutions and electric vehicle owners. Since the energy provided to charge the electric vehicles comes from small generation, the energy's selling price can be more attractive than the ones offered by the retailers – meaning economic gains for the institutions and savings for the users. A case study was carried out to evaluate the feasibility of the proposed solution and its economic advantages. Given the assumptions considered in the study, 3213 electric vehicles could be fully charged by one institution in one year. This result indicates that implementing the proposed framework could enable synergy between institutions and electric vehicle owners, providing clean and affordable energy to charge vehicles.
+![image](https://user-images.githubusercontent.com/47533831/111847912-c3548180-8901-11eb-9cff-da5db57ddb7d.png)
 
-Keywords – Blockchain; Business Model; Electric vehicles; Intelligent Management Systems; Photovoltaic systems.
+The "clients" table contains the personal data of each client (first and last name and birth date).
+Each client will have an unique ID.
+Bellow we can see the "clients" table.
+
+![image](https://user-images.githubusercontent.com/47533831/111848052-10385800-8902-11eb-897a-ef95a07fae29.png)
+
+The "vehicles" database contains the brand and model of each car, the year when the car was produced and also the owner_id (connecting to the "clients" table).
+Bellow we can see the "vehicles" table.
+![image](https://user-images.githubusercontent.com/47533831/111848208-72915880-8902-11eb-9d65-5b92df94f245.png)
+
+
+

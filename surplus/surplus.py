@@ -10,7 +10,7 @@ delta = 0.10 # percentual do consumo [%]
 
 # Dados do consumo
 
-dados_consumo=pd.read_csv("dados_consumo.csv", sep=";", header=None)
+dados_consumo=pd.read_csv("dados/dados_consumo.csv", sep=";", header=None)
 dados_consumo.rename({0:'Date',
            1:'Month',
            2:'Cons'},axis=1,inplace=True)
@@ -27,7 +27,7 @@ dados_consumo.loc[dados_consumo.index=='2018-02-28','Cons'] = dados_consumo['Con
 
 # Leitura e tratamento dos dados
 
-dados_irradiacao=pd.read_csv("dados_irradiacao.csv", sep=";")
+dados_irradiacao=pd.read_csv("dados/dados_irradiacao.csv", sep=";")
 dados_irradiacao['Irradiacao']=dados_irradiacao['Irradiacao'].str.replace(',','.').astype(float)
 
 # Função que calcular a energia gerada por PV
@@ -82,4 +82,4 @@ plt.ylabel("Energy [MWh]",fontsize='large')
 for i in range(1,13):
     print(i, ":", dados_consumo['Surplus'].loc[(dados_consumo.index.month==i)].mean())
 
-dados_consumo.to_csv('dados.csv')
+dados_consumo.to_csv('dados/dados.csv')
